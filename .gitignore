@@ -1,0 +1,22 @@
+# Library
+node_modules/**/*
+
+# IDEs
+.vscode/*
+.history/*
+.idea/*
+
+# Other
+coverage/
+*.log
+
+## Compiled JavaScript files
+**/*.js
+**/*.js.map
+
+# Typescript v1 declaration files
+typings/
+
+
+# Configs
+.env
