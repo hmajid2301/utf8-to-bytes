@@ -11,7 +11,6 @@
     "tests": "jest",
     "coverage": "jest --coverage",
     "build": "tsc -p . --skipLibCheck",
-    "publish": "npm publish",
     "lint": "tslint src/**/*.{tx}",
     "lint:code-formatter": "prettier --check src/*",
     "lint:compiler": "tsc --project . --noEmit --pretty --skipLibCheck"

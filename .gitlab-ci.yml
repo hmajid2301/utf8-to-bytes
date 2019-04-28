@@ -49,6 +49,6 @@ publish:npm:
     - /^release/.*$/
   script:
     - yarn build
-    - echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc
-    - yarn publish
+    - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
+    - yarn publish --non-interactive
 
