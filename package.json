@@ -1,0 +1,56 @@
+{
+  "name": "utf8-to-bytes",
+  "version": "0.1.0",
+  "description": "Used to convert between utf-8/16 strings to bytes.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "tests": "jest",
+    "coverage": "jest --coverage",
+    "build": "tsc -p . --skipLibCheck",
+    "publish": "npm publish",
+    "lint": "tslint src/**/*.{tx}",
+    "lint:code-formatter": "prettier --check src/*",
+    "lint:compiler": "tsc --project . --noEmit --pretty --skipLibCheck"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/hmajid2301/utf8-to-bytes.git"
+  },
+  "keywords": [
+    "converter",
+    "utf-8",
+    "bytes",
+    "string"
+  ],
+  "author": "Haseeb Majid",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://gitlab.com/hmajid2301/utf8-to-bytes/issues"
+  },
+  "homepage": "https://gitlab.com/hmajid2301/utf8-to-bytes#readme",
+  "devDependencies": {
+    "@types/jest": "24.0.11",
+    "jest": "24.7.1",
+    "prettier": "1.17.0",
+    "ts-jest": "24.0.0",
+    "tslint": "5.16.0",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-config-standard": "8.0.1",
+    "typescript": "3.4.5"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testMatch": [
+      "**/__tests__/**/*.ts?(x)"
+    ],
+    "modulePathIgnorePatterns": [
+      ".history"
+    ]
+  }
+}

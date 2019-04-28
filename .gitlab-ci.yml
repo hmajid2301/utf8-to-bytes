@@ -1,0 +1,54 @@
+image: node:10.15.3
+
+stages:
+  - test
+  - publish
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+
+variables:
+  DOCKER_DRIVER: overlay2
+
+before_script:
+  - yarn
+
+lint:
+  stage: test
+  script:
+    - yarn lint
+
+lint:code-formatter:
+  stage: test
+  script:
+    - yarn lint:code-formatter
+
+lint:compiler:
+  stage: test
+  script:
+    - yarn lint:compiler
+
+tests:unit:
+  stage: test
+  script:
+    - yarn tests
+
+tests:coverage:
+  stage: test
+  only: 
+    - master
+  script:
+    - yarn coverage
+  coverage: '/^All files\s+\|\s+\d+\.*\d*\s+\|\s*(\d+\.*\d*)/'
+
+publish:npm:
+  stage: publish
+  only:
+    - /^release/.*$/
+  script:
+    - yarn build
+    - echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc
+    - yarn publish
+

@@ -9,14 +9,12 @@ node_modules/**/*
 # Other
 coverage/
 *.log
+.npmrc
 
 ## Compiled JavaScript files
+dist/
 **/*.js
 **/*.js.map
 
 # Typescript v1 declaration files
 typings/
-
-
-# Configs
-.env
