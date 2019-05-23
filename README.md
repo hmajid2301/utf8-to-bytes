@@ -55,7 +55,7 @@ To convert an array (byte or decimal) back into a string.
 import { arrayToString } from "utf8-to-bytes";
 
 const bytes = ["01001000", "01100101"];
-const strBin = arrayToString(bin); // "He"
+const strBin = arrayToString(bytes); // "He"
 
 const decs = [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100, 33];
 const strDec = arrayToString(decs); // "Hello World!"
