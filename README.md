@@ -1,7 +1,5 @@
 [![pipeline status](https://gitlab.com/hmajid2301/utf8-to-bytes/badges/master/pipeline.svg)](https://gitlab.com/hmajid2301/utf8-to-bytes/commits/master)
-
 [![coverage report](https://gitlab.com/hmajid2301/utf8-to-bytes/badges/master/coverage.svg)](https://gitlab.com/hmajid2301/utf8-to-bytes/commits/master)
-
 [![npm version](https://img.shields.io/npm/v/utf8-to-bytes.svg)](https://www.npmjs.com/package/utf8-to-bytes)
 
 # Introduction
