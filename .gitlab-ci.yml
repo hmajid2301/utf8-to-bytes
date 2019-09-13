@@ -45,10 +45,9 @@ tests:coverage:
 
 publish:npm:
   stage: publish
-  only:
-    - /^release/.*$/
   script:
     - yarn build
+    - ls -l dist
     - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
     - yarn publish --non-interactive
 
