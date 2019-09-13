@@ -41,7 +41,7 @@ tests:coverage:
     - master
   script:
     - yarn coverage
-  coverage: '/^All files\s+\|\s+\d+\.*\d*\s+\|\s*(\d+\.*\d*)/'
+  coverage: /All\sfiles.*?\s+(\d+.\d+)/
 
 publish:npm:
   stage: publish
@@ -49,6 +49,7 @@ publish:npm:
     - /^release/.*$/
   script:
     - yarn build
+    - ls -l dist
     - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
     - yarn publish --non-interactive
 

@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.2] - 2019-09-13
+### Fixed
+- Missing `index.d.ts` file in the tarball on NPM.
+
 ## [0.1.1] - 2019-09-12
 ### Fixed
 - README badges, should all be in the same row.
