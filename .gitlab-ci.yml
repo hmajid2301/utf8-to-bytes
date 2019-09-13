@@ -41,10 +41,12 @@ tests:coverage:
     - master
   script:
     - yarn coverage
-  coverage: '/^All files\s+\|\s+\d+\.*\d*\s+\|\s*(\d+\.*\d*)/'
+  coverage: /All\sfiles.*?\s+(\d+.\d+)/
 
 publish:npm:
   stage: publish
+  only:
+    - /^release/.*$/
   script:
     - yarn build
     - ls -l dist
