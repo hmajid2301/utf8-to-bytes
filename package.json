@@ -19,6 +19,10 @@
     "type": "git",
     "url": "git+ssh://git@gitlab.com/hmajid2301/utf8-to-bytes.git"
   },
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
   "keywords": [
     "converter",
     "utf-8",
