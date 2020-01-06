@@ -1,6 +1,6 @@
 {
   "name": "utf8-to-bytes",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Used to convert between utf-8/16 strings to bytes.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
